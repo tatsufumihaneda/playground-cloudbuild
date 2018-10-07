@@ -14,5 +14,5 @@ func main() {
 }
 
 func HealthcheckHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("OK -CI BUILD-"))
+	w.Write([]byte("OK -CI BUILD- again"))
 }
