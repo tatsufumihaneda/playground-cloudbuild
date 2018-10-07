@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: goapp
+  labels:
+    app: goapp
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: goapp
+    spec:
+      containers:
+      - name: goapp
+        image: gcr.io/githubbuildsdemoapp/playground-cloudbuild:latest
+        imagePullPolicy: Always
+        ports:
+        - name: http-server
+          containerPort: 8080
