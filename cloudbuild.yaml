@@ -14,6 +14,5 @@ steps:
     gcloud container clusters get-credentials cluster-1 --zone asia-northeast1-a --project $PROJECT_ID
     kubectl set image deployment/goapp goapp=gcr.io/$PROJECT_ID/playground-cloudbuild:$REVISION_ID
 
-
 images:
 - "gcr.io/$PROJECT_ID/playground-cloudbuild"
